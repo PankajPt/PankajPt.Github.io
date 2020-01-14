@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<title>Era</title>
+	<style>
+	body {
+		background-color:rgb(245, 255, 254);
+	}
+	p {
+	color: rgb(255,0,0);
+	}
+	#row1{
+		background-color:rgb(122, 197, 255);
+	}
+	#row2{
+		background-color:rgb(183, 134, 247);
+	}
+	</style>
+	</head>
+	
+	<body>
+	<h1>Basic HTML</h1>
+	<a href = "https://www.whoishostingthis.com/resources/html-for-beginners/" target ="_blank">Click Here</a>
+	
+	<p><em>Welcome to html course</em>
+		<h3 id="top_of_page"><em>Block-level vs. inline</em></h3>
+		With the exception of tags that provide information about the document itself, HTML tags fall into two categories, block and inline.
+		<h3><em>Block elements</em></h3>
+		Block elements represent rectangular blocks of content. They have an implied line break before and after. Block elements include sectional content like paragraphs ( " <code>&lt;p&gt;</code> " ), divisions ( " <code>&lt;div&gt;</code> " ), and headlines ( " <code>&lt;h1&gt;</code> ", " <code>&lt;h2&gt;</code> ", etc.)
+	</p>
+	
+	<!-- img src = "https://www.whoishostingthis.com/wp-content/uploads/2018/04/html-for-beginners.webp" /-->
+	<p>
+	<!-- Title with line break-->
+	<h2>Hi Team:<br/>
+	<small>Welcome to RJIO</small></h2>
+	</p>
+	
+	<!-- Paragraph -->
+	
+	<h3><em>Paragraphs</em></h3>
+	<p>The paragraph tag — <code>&lt;p&gt;</code> — should surround every paragraph of text in your main content.
+Multiple line breaks in your source code (without the <code>&lt;br&gt;</code> line-break tag) will not display as line breaks on-page. In order to get proper display spacing between paragraphs of text, you should use the <code>&lt;p&gt;</code> tag.
+	</p>
+	<!-- list -->
+	<h3><em>List</em></h3>
+	<p>There are three types of lists available in HTML:<br/>
+	In the past, you could specify what kind of bullet you wanted (disc, square, circle) in the type attribute. But as of HTML5, this is not supported. If you want to change the bullets, youll have to use CSS.<br/>
+	<br/>
+	<strong>Unordered list:</strong>
+	</p>
+	<ul>
+	<li><code>&lt;ul&gt;</code> — Unordered list. — Bulleted lists (like this one), called “unordered” because they are not numbered.
+	</li>
+	<li><code>&lt;ol&gt;</code> — Ordered list. — Numbered lists, which can use regular numerals (1, 2, 3), roman numerals (I, II, II or i, ii, iii), or letters (A, B, C or a, b, c).
+	</li>
+	<li><code>&lt;dl&gt;</code> — Definition list. — A list with individual terms and then descriptions for each term. (This list could have been a definition list, but it isnt.)
+	</li>
+	</ul>
+	<!-- List-->
+	<p><strong>Ordered List:</strong><br/>
+	Ordered lists are lists which are numbered or lettered. The outside element is <code>&lt;ol&gt;</code>, and the <code>&lt;li&gt;</code> tag is used again for each item.
+	</p>
+	<p>The <code>&lt;ol&gt;</code> element supports several attributes which change how the the list is numbered.The type attribute can be used to change the default Arabic numerals (1, 2, 3) to letters or Roman numerals (capitals or lower-case).
+	</p>
+	<ol>
+	<li><code>&lt;ol type="i"&gt;</code>
+	<li><code>&lt;li&gt;</code>Lowercase Roman numeral 1.<code>&lt;/li&gt;</code>
+	<li><code>&lt;li&gt;</code>Lowercase Roman numeral 2.<code>&lt;/li&gt;</code>
+	<li><code>&lt;li&gt;</code>Lowercase Roman numeral 3.<code>&lt;/li&gt;</code>
+	<li><code>&lt;/ol&gt;</code></li>
+	</ol>
+	<p>Options for type are:
+	</p>
+	<ol type ="i">
+	<li>1 — Arabic numerals (1, 2, 3) — This is the default.</li>
+	<li>A — Capital letters (A, B, C)</li>
+	<li>a — Lower-case letters (a, b, c)</li>
+	<li>I — Capital Roman numerals (I, II, III)</li>
+	<li>i — Lower-case Roman numerals (i, ii, iii)</li>
+	</ol>
+	<p>
+	The start attribute can be used to begin the list numbering on a number other than 1. This can be used for numbers or for other types.
+	</p>
+	<h3><strong>Nesting lists</strong></h3>
+	<ol type ="A" start = "16">
+	<li>1 — Arabic numerals (1, 2, 3) — This is the default.</li>
+	<li>A — Capital letters (A, B, C)</li>
+		<ol>
+		<li>1 — Arabic numerals (1, 2, 3) — This is the default.</li>
+		<li>A — Capital letters (A, B, C)</li>
+			<ol>
+			<li>a — Lower-case letters (a, b, c)</li>
+			<li>I — Capital Roman numerals (I, II, III)</li>
+			<li>i — Lower-case Roman numerals (i, ii, iii)</li>
+			</ol>
+		</ol>
+	<li>a — Lower-case letters (a, b, c)</li>
+	<li>I — Capital Roman numerals (I, II, III)</li>
+	<li>i — Lower-case Roman numerals (i, ii, iii)</li>
+	</ol>
+	
+	
+	<!-- 3 Description / Definition Lists-->
+	<h4>Types of Lists</h4>
+	<p>The whole list is wrapped in the <code>&lt;dl&gt;</code> tag. Each term in the list is marked with a <code>&lt;dt&gt;</code> tag (“definition term”), and each term is followed by one or more <code>&lt;dd&gt;</code> elements (“definition description”).
+	It should be noted that lists can not be nested inside of paragraph elements ( <code>&lt;p&gt</code> ). This is because all lists are block-level elements, and paragraphs (which are blocks also) can only contain span-level elements.
+	This can occasionally be annoying because in normal written text there are sometimes perfectly good reasons for wanting to include a list inside of a paragraph. However it simply does not work.
+	</p>
+	<dl>
+	<dt>Ordered List</dt>
+	<dd>A <s>numbered</s> list of items.</dd><br/>
+	<dt>Unordered List</dt>
+	<dd>A list of bulleted items.</dd><br/>
+	<dt>Definition List</dt>
+	<dd>A list of <del>term</del> <ins>terms</ins> with associated definitions.</dd>
+	<dd>Each term can have one or more definition descriptions.</dd>
+	<dd>The obvious use for a description list is a glossary or dictionary, but that isnt the only standard use.</dd>
+	</dl>
+	<blockquote cite="http://www.gutenberg.org/ebooks/2265">
+	<q> To be or not to be, that is the question.</q><br/>
+	&dash; <a href = "http://www.gutenberg.org/ebooks/2265" target="_blank"><em>Hemlet</em></a> William Shakespeare
+	</blockquote>
+	<!-- Table -->
+	
+	<!--ID refernce -->
+	<a href = "#top_of_page"><b><i>go to top</i></b></a>
+	</body>
+</html>
