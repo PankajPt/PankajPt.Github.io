@@ -13,12 +13,14 @@
             left: 50%;
             padding: 40px;
             transform: translate(-50%, -50%);
+            border: 1.2px springgreen solid;
         }
         
         .text-box {
             margin: 20px;
             padding: 9px;
             overflow: hidden;
+            
         }
         
         body {
@@ -26,12 +28,14 @@
         }
         
         .login-box h1 {
-            border-bottom: 5px springgreen solid;
+/*            border-bottom: 2px springgreen solid;*/
             color: white;
             padding: 10px;
-            margin-bottom: 30px;
+            margin-top: 0;
+            margin-bottom: 50px;
             text-align: center;
             width: auto;
+            
         }
         
         .text-box input {
@@ -39,6 +43,8 @@
             border: none;
             color: white;
             border-bottom: 1px springgreen solid;
+            width: 80%;
+            padding: 5px;
         }
         
         .text-box i {
@@ -50,7 +56,7 @@
         
         .btn {
             background: none;
-            width: 100%;
+            width: 85%;
             border: 1px springgreen solid;
             color: white;
             margin: 20px;
@@ -68,16 +74,40 @@
 <body>
     <div class="login-box">
         <h1>Login</h1>
-        <div class="text-box">
+        <div class="text-box" id="user">
             <i class="fas fa-user"></i>
-            <input type="text" placeholder="Username" name="" value=""></br>
+            <input type="text" placeholder="Username" name="" value="" id="userIn"></br>
         </div>
-        <div class="text-box">
+        <div class="text-box" id="passwd">
             <i class="fas fa-lock"></i>
-            <input type="password" placeholder="Password" name="" value="">
+            <input type="password" placeholder="Password" name="" value="" id="passwdIn">
         </div>
-        <input type="button" class="btn" value="Sign-in">
-    </div>
+        <input type="button" class="btn" value="Sign-in" id="button"><br>
+    <div id="warning" style="color: red"></div>
+    <script>
+        var button = document.getElementById("button");
+        var onBtnClick = function(){
+            var user = document.getElementById("userIn").value;
+            var pass = document.getElementById("passwdIn").value;
+            var display;
+            var warning = document.getElementById("warning");
+            if (user == ""){
+                 display = "Please enter Username";
+            }
+            else if(pass == ""){
+               display = "Please enter Password";
+            }
+            else{
+               display = "Successfully Login";
+                warning.style.color = "springgreen";
+            }
+//            var warning = document.getElementById("warning");
+            warning.innerHTML = display;
+        }
+        button.addEventListener("click", onBtnClick);
+        
+    </script>
+    
 </body>
 
 </html>
